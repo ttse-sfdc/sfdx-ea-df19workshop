@@ -1,0 +1,12 @@
+{
+    "orgName": "EA DF19 Workshop SFDX",
+    "country": "US",
+    "adminEmail": "ttse@salesforce.com",
+    "edition": "Developer",
+    "features" : ["DevelopmentWave"],
+    "settings": {
+          "lightningExperienceSettings": {
+              "enableS1DesktopEnabled": true
+          }
+      }
+  }

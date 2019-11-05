@@ -1,5 +1,5 @@
 #create scratch org
-sfdx force:org:create -s -f config/project-scratch-def.json --targetdevhubusername terry@dev.hub
+sfdx force:org:create -s -f config/project-scratch-def.json
 
 #install Wow Demo packages
 sfdx force:package:install --package 04tf4000003KZ8R

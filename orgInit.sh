@@ -4,7 +4,6 @@ sfdx force:org:create -s -f config/project-scratch-def.json
 #install Wow Demo packages
 sfdx force:package:install --package 04tf4000003KZ8R
 sfdx force:package:install --package 04t2E000003SP1i
-sfdx shane:analytics:dataset:upload -f data/analytics/UX_SAMPLE_DATA.csv -m data/analytics/UX_SAMPLE_DATA.json -n UX_SAMPLE_DATA
 
 #install Data Catalog Package
 sfdx force:package:install --package 04t4T000001liUw
@@ -28,6 +27,10 @@ sfdx force:data:record:create -s Event -v "Subject='Call' DurationInMinutes='1' 
 
 #create Sales Analytics app
 sfdx analytics:app:create -f analytics/sales-analytics-template-values.json
+
+#upload any Analytics datasets
+sfdx shane:analytics:dataset:upload -f data/analytics/UX_SAMPLE_DATA.csv -m data/analytics/UX_SAMPLE_DATA.json -n UX_SAMPLE_DATA
+
 
 sfdx force:user:password:generate
 

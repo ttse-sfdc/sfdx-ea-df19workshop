@@ -13,13 +13,13 @@ sfdx force:source:push -f
 
 #prep unique Username in User csv
 TIMESTAMP=$(date "+%Y%m%d%H%M%S")
-sed "s/{TIMESTAMP}/"$TIMESTAMP"/g" data/core/User.csv > data/core/User_Load.csv
+sed "s/{TIMESTAMP}/"$TIMESTAMP"/g" data/core/User.csv > temp/User_Load.csv
 
 #load csvs into core objects
-sfdx force:data:bulk:upsert -s UserRole -f data/core/UserRole.csv -i Name
-sfdx force:data:bulk:upsert -s User -f data/core/User_Load.csv -i External_Id__c
-sfdx force:data:bulk:upsert -s Account -f data/core/Account.csv -i External_Id__c -w 2
-sfdx force:data:bulk:upsert -s Opportunity -f data/core/Opportunity.csv -i External_Id__c -w 2
+sfdx force:data:bulk:upsert -s UserRole -f data/core/UserRole.csv -i Name -w 2
+sfdx force:data:bulk:upsert -s User -f temp/User_Load.csv -i External_Id__c -w 2
+sfdx force:data:bulk:upsert -s Account -f data/core/Account.csv -i External_Id__c -w 5
+sfdx force:data:bulk:upsert -s Opportunity -f data/core/Opportunity.csv -i External_Id__c -w 5
 
 #create min records for Sales Analytics
 sfdx force:data:record:create -s Task -v "Subject='Call'"
@@ -30,7 +30,6 @@ sfdx analytics:app:create -f analytics/sales-analytics-template-values.json
 
 #upload any Analytics datasets
 sfdx shane:analytics:dataset:upload -f data/analytics/UX_SAMPLE_DATA.csv -m data/analytics/UX_SAMPLE_DATA.json -n UX_SAMPLE_DATA
-
 
 sfdx force:user:password:generate
 

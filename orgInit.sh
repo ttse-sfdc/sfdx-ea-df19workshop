@@ -15,8 +15,7 @@ sfdx force:package:install --package 04t4T000001liUw
 sfdx force:source:push -f
 
 #prep unique Username in User csv
-TIMESTAMP=$(date "+%Y%m%d%H%M%S")
-sed "s/{TIMESTAMP}/"$TIMESTAMP"/g" data/core/User.csv > sfdx_temp/User_Load.csv
+sed "s/{TIMESTAMP}/$(date "+%Y%m%d%H%M%S")/g" data/core/User.csv > sfdx_temp/User_Load.csv
 
 #load csvs into core objects
 sfdx force:data:bulk:upsert -s UserRole -f data/core/UserRole.csv -i Name -w 2

@@ -2,7 +2,7 @@
 mkdir sfdx_temp
 
 #create scratch org
-sfdx force:org:create -s -f config/project-scratch-def.json
+sfdx force:org:create -s -f config/project-scratch-def.json -d 14 -s -w 60
 
 #install Wow Demo packages
 sfdx force:package:install --package 04tf4000003KZ8R

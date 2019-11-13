@@ -41,4 +41,4 @@ sfdx force:user:password:generate
 sfdx force:user:display
 
 #open org
-sfdx force:org:open
+sfdx force:org:open -p /analytics/wave/wave.apexp#home

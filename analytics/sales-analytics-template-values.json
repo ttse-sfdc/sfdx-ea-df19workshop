@@ -1,6 +1,6 @@
 {
     "description":"app description",
-    "label":"Sales Analytics",
+    "label":"Sales Analytics DF19",
     "assetIcon":"16.png",
     "templateSourceId":"sfdc_internal__Sales_Analytics_Flex",
     "templateValues":{

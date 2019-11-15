@@ -35,6 +35,7 @@ sfdx analytics:app:create -f analytics/sales-analytics-template-values.json
 
 #upload any Analytics datasets
 sfdx shane:analytics:dataset:upload -f data/analytics/UX_SAMPLE_DATA.csv -m data/analytics/UX_SAMPLE_DATA.json -n UX_SAMPLE_DATA
+sfdx shane:analytics:dataset:upload -f data/analytics/UX_SAMPLE_DATA.csv -m data/analytics/UX_SAMPLE_DATA.json -n Sample_UX_Workshop
 
 #clean up
 rm -rf sfdx_temp

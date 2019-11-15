@@ -8,6 +8,9 @@ sfdx force:org:create -s -f config/project-scratch-def.json -d 14 -s -w 60
 sfdx force:package:install --package 04tf4000003KZ8R
 sfdx force:package:install --package 04t2E000003SP1i
 
+#install Design Workshop package
+sfdx force:package:install --package 04t2E000003SPDH
+
 #install Data Catalog Package
 sfdx force:package:install --package 04t4T000001liUw
 

@@ -1,6 +1,6 @@
 {
-    "orgName": "EA DF19 Workshop SFDX",
-    "description": "Vanilla Dev Org with Sales Data, Sales Analytics and  UX/UI Apps",
+    "orgName": "TCRM Workshop SFDX",
+    "description": "Vanilla Dev Org with Sales Data, Sales Analytics and UX/UI Apps",
     "template": "0TT6A000006BlTd",
     "country": "US",
     "adminEmail": "ttse@salesforce.com",

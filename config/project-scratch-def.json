@@ -7,8 +7,7 @@
     "features" : ["DevelopmentWave","DataProcessingEngine"],
     "settings": {
           "lightningExperienceSettings": {
-              "enableS1DesktopEnabled": true,
-              "sonicEnabled": true
+              "enableS1DesktopEnabled": true
           }
       }
   }

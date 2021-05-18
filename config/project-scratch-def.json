@@ -4,10 +4,11 @@
     "template": "0TT6A000006BlTd",
     "country": "US",
     "adminEmail": "ttse@salesforce.com",
-    "features" : ["DevelopmentWave"],
+    "features" : ["DevelopmentWave","DataProcessingEngine"],
     "settings": {
           "lightningExperienceSettings": {
-              "enableS1DesktopEnabled": true
+              "enableS1DesktopEnabled": true,
+              "sonicEnabled": true
           }
       }
   }
